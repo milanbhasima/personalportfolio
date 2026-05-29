@@ -17,10 +17,19 @@
                       <div class="row flex-v-align">
                         
                         <div class="col-sm-12 col-md-5 col-lg-5">
-                          <div 
+                          <!-- <div 
                               class="home-photo"
                               style="background-image: url('{% static "img/main_photo.jpg" %}');">
-                          </div>
+                          </div> -->
+                              <div 
+                                class="home-photo"
+                                style="
+                                    background-image: url('{% static "img/main_photo.jpg" %}');
+                                    background-size: contain;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                ">
+                            </div>
                         </div>
 
                         <div class="col-sm-12 col-md-7 col-lg-7">
