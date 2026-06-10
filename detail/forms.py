@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contact
+from .models import Contact, BlogPost
 
 
 # class ContactForm(forms.ModelForm):
@@ -68,9 +68,6 @@ from .models import Contact
 #             }),
 #         }
 
-from django import forms
-from .models import Contact
-
 
 class ContactForm(forms.ModelForm):
 
@@ -115,4 +112,46 @@ class ContactForm(forms.ModelForm):
                 'required': 'required',
                 'data-error': 'Please, leave me a message.'
             }),
+        }
+
+class BlogPostForm(forms.ModelForm):
+
+    class Meta:
+        model = BlogPost
+
+        fields = [
+            "title",
+            "category",
+            "tags",
+            "content",
+            "featured_image",
+            "status",
+            "published_at",
+        ]
+
+        widgets = {
+            "title": forms.TextInput(
+                attrs={"class": "form-control"}
+            ),
+            "category": forms.Select(
+                attrs={"class": "form-select"}
+            ),
+            "tags": forms.SelectMultiple(
+                attrs={"class": "form-select"}
+            ),
+            "content": forms.Textarea(
+                attrs={
+                    "class": "form-control",
+                    "rows": 10,
+                }
+            ),
+            "status": forms.Select(
+                attrs={"class": "form-select"}
+            ),
+            "published_at": forms.DateTimeInput(
+                attrs={
+                    "class": "form-control",
+                    "type": "datetime-local",
+                }
+            ),
         }

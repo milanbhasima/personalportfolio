@@ -5833,6 +5833,23 @@ a.post-thumbnail:hover {
     margin-top: 20px;
 }
 
+    [data-bs-theme="dark"] body {
+        background: #121212;
+        color: #fff;
+    }
+
+    [data-bs-theme="dark"] .header,
+    [data-bs-theme="dark"] .site-footer {
+        background: #1e1e1e;
+    }
+
+    [data-bs-theme="dark"] a {
+        color: #ffffff;
+    }
+
+    [data-bs-theme="dark"] .page-container {
+        background: #121212;
+    }
 /* ============================================================================= 
 15. Updates
 ============================================================================= */
